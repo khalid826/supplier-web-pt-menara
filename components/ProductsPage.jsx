@@ -52,11 +52,11 @@ export default function ProductsPage({ breadcrumb }) {
                       </div>
 
                       <div className="overflow-x-auto">
-                        <div className="flex space-x-4 md:space-x-6 lg:space-x-8 min-w-max pb-4">
+                        <div className="flex space-x-4 md:space-x-6 lg:space-x-8 pb-4">
                           {category.products && category.products.map((product) => (
                             <div
                               key={product.id}
-                              className="bg-gray-50 rounded-xl p-4 md:p-6 hover:bg-[#FFC402]/10 hover:shadow-lg transition-all duration-300 transform hover:scale-102 group min-w-[200px] md:min-w-[220px] lg:min-w-[240px] flex-shrink-0 min-h-[120px] md:min-h-[140px] flex flex-col justify-center"
+                              className="bg-gray-50 rounded-xl p-4 md:p-6 hover:bg-[#FFC402]/10 hover:shadow-lg transition-all duration-300 transform hover:scale-102 group w-[200px] md:w-[220px] lg:w-[240px] flex-shrink-0 h-[120px] md:h-[140px] flex flex-col justify-center"
                             >
                               <div className="flex-1 flex items-center justify-center mb-3 md:mb-4">
                                 <img

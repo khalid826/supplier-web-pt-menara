@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Footer from '../components/common/Footer'
+import FooterWrapper from '../components/common/FooterWrapper'
 
 export const metadata: Metadata = {
   title: 'PT Menara Adhi Sitara',
@@ -22,8 +23,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
-        {/* Footer */}
-        <Footer />
+        {/* Footer with blacklist */}
+        <FooterWrapper />
       </body>
     </html>
   )

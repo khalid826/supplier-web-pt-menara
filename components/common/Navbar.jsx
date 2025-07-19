@@ -64,14 +64,12 @@ export default function Navbar({ navigation = [
           >
             {/* Logo at left end */}
             <div className={`flex-shrink-0 flex items-center ${isAtTop ? "mr-4 pl-0" : "mr-2 pl-2"} transition-all duration-500`}>
-              <Link href="/">
-                <img 
-                  src="/icon.png" 
-                  alt="PT Menara Adhi Sitara Logo" 
-                  className="h-12 w-12 mr-2 object-contain"
-                  onError={(e) => handleImageError(e, ASSET_PATHS.LOGO)}
-                />
-              </Link>
+              <img 
+                src="/icon.png" 
+                alt="PT Menara Adhi Sitara Logo" 
+                className="h-12 w-12 mr-2 object-contain"
+                onError={(e) => handleImageError(e, ASSET_PATHS.LOGO)}
+              />
             </div>
             {/* Nav buttons */}
             <div className={`flex flex-1 items-center space-x-1 sm:space-x-2 justify-center transition-all duration-500 flex-wrap`}>
@@ -101,14 +99,12 @@ export default function Navbar({ navigation = [
           >
             {/* Logo at left end */}
             <div className={`flex-shrink-0 flex items-center ${isAtTop ? "mr-2 pl-0" : "mr-2 pl-2"} transition-all duration-500`}>
-              <Link href="/">
-                <img 
-                  src="/icon.png" 
-                  alt="PT Menara Adhi Sitara Logo" 
-                  className="h-6 w-6 object-contain"
-                  onError={(e) => handleImageError(e, ASSET_PATHS.LOGO)}
-                />
-              </Link>
+              <img 
+                src="/icon.png" 
+                alt="PT Menara Adhi Sitara Logo" 
+                className="h-6 w-6 object-contain"
+                onError={(e) => handleImageError(e, ASSET_PATHS.LOGO)}
+              />
             </div>
             {/* Hamburger */}
             <div className="flex flex-1 justify-end">
@@ -130,8 +126,12 @@ export default function Navbar({ navigation = [
           <div 
             ref={dropdownRef}
             className="md:hidden absolute left-1/2 z-50 top-full flex justify-center w-full -translate-x-1/2 transition-all duration-300"
+            style={{ marginTop: '-1px' }}
           >
-            <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-100 px-3 py-2 min-w-[180px] max-w-xs w-full flex flex-col items-stretch space-y-2 opacity-100 scale-100 pointer-events-auto transform origin-top animate-in slide-in-from-top-2 duration-300">
+            <div className={`${isAtTop
+              ? "bg-white/90 backdrop-blur-md rounded-b-2xl shadow-2xl border border-gray-100 border-t-0"
+              : "bg-white/90 backdrop-blur-md rounded-b-2xl shadow-2xl border border-gray-100 border-t-0"
+            } px-3 py-2 min-w-[180px] max-w-xs w-full flex flex-col items-stretch space-y-2 opacity-100 scale-100 pointer-events-auto transform origin-top animate-in slide-in-from-top-2 duration-300`}>
               {navigation.map((item, index) => (
                 <Link
                   key={item.id}

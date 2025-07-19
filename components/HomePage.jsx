@@ -65,7 +65,7 @@ export default function HomePage({ breadcrumb }) {
         <section className="relative bg-white overflow-hidden w-full px-0 min-h-screen md:min-h-screen flex items-center py-16 md:py-0">
           <div className="w-full flex justify-center items-center">
             <div className="max-w-6xl w-full px-4 sm:px-6 lg:px-8 mx-auto">
-              <div className="text-center mb-8 md:mb-16 animate-fade-in-up">
+              <div className="text-center mb-4 md:mb-8 animate-fade-in-up">
                 <h2 className="text-2xl md:text-4xl font-extrabold text-[#0A0F17] mb-4 tracking-tight">Why Choose Us</h2>
                 <p className="text-base md:text-lg text-gray-600 mb-6">Comprehensive solutions backed by excellence</p>
                 <div className="mx-auto w-12 h-0.5 bg-[#0A0F17] rounded-full mb-4" />
