@@ -41,7 +41,7 @@ export default function ProductsPage({ breadcrumb }) {
               
               <div className="space-y-12 md:space-y-16">
                 {categories && categories.length > 0 ? (
-                  categories.map((category, index) => (
+                  categories.map((category) => (
                     <div
                       key={category.id}
                       className="bg-white rounded-2xl shadow-xl p-8 md:p-12 transform hover:scale-[1.02] transition-all duration-300"
@@ -53,7 +53,7 @@ export default function ProductsPage({ breadcrumb }) {
 
                       <div className="overflow-x-auto">
                         <div className="flex space-x-4 md:space-x-6 lg:space-x-8 min-w-max pb-4">
-                          {category.products && category.products.map((product, productIndex) => (
+                          {category.products && category.products.map((product) => (
                             <div
                               key={product.id}
                               className="bg-gray-50 rounded-xl p-4 md:p-6 hover:bg-[#FFC402]/10 hover:shadow-lg transition-all duration-300 transform hover:scale-102 group min-w-[200px] md:min-w-[220px] lg:min-w-[240px] flex-shrink-0 min-h-[120px] md:min-h-[140px] flex flex-col justify-center"

@@ -2,7 +2,7 @@
 
 A modern, responsive corporate website for PT Menara Adhi Sitara, showcasing electrical and instrumentation solutions. Built with Next.js 14, React 19, and Tailwind CSS.
 
-![PT Menara Adhi Sitara](public/icon2.png)
+![PT Menara Adhi Sitara](public/logo-inverse.png)
 
 ## Features
 

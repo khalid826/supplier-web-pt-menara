@@ -3,7 +3,7 @@
 import HomePage from "../components/HomePage"
 import FloatingContactButton from "../components/contact/FloatingContactButton"
 import AutoBreadcrumb from "../components/common/AutoBreadcrumb"
-import Navbar from "../components/common/Navbar.jsx"
+import Navbar from "../components/common/Navbar"
 
 // Main App Component
 export default function Page() {

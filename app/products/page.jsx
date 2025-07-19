@@ -3,7 +3,7 @@
 import ProductsPage from '../../components/ProductsPage';
 import FloatingContactButton from '../../components/contact/FloatingContactButton';
 import AutoBreadcrumb from '../../components/common/AutoBreadcrumb';
-import Navbar from '../../components/common/Navbar.jsx';
+import Navbar from '../../components/common/Navbar';
 
 export default function Products() {
   return (

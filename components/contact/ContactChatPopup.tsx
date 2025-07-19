@@ -54,7 +54,7 @@ export default function ContactChatPopup({ onClose }: ContactChatPopupProps) {
       );
       setSuccess(true);
       setForm({ name: "", email: "", message: "" });
-    } catch (err) {
+    } catch {
       setError("Failed to send email. Please try again later.");
     } finally {
       setLoading(false);

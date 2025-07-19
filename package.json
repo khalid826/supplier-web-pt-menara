@@ -1,6 +1,7 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "pt-menara-adhi-sitara",
+  "version": "1.0.0",
+  "description": "Corporate website for PT Menara Adhi Sitara - Electrical & Instrumentation Solutions",
   "private": true,
   "scripts": {
     "build": "next build",
@@ -63,8 +64,14 @@
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "15.4.2",
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
     "typescript": "5.7.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
   }
 }

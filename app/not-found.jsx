@@ -19,7 +19,7 @@ export default function NotFound() {
             Page Not Found
           </h2>
           <p className="text-lg md:text-xl text-gray-600 mb-6">
-            Sorry, the page you're looking for doesn't exist or has been moved.
+            Sorry, the page you&apos;re looking for doesn&apos;t exist or has been moved.
           </p>
           <p className="text-base text-gray-500">
             Please check the URL or navigate back to our homepage.
