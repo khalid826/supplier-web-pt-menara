@@ -1,0 +1,10 @@
+/*
+ * products.json
+ *
+ * Static data for product information.
+ * Used in: product-related components and pages.
+ */
+[
+  { "name": "Product A", "image": "/images/products/product-a.png", "description": "Description for Product A." },
+  { "name": "Product B", "image": "/images/products/product-b.png", "description": "Description for Product B." }
+] 
