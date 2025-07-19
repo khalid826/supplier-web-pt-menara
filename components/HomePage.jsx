@@ -1,25 +1,26 @@
-import ServiceItem from "./ServiceItem";
-import ClientMarquee from "./ClientMarquee";
-import { Clock, Zap, Truck, Award } from "lucide-react";
-import FadeInOnScroll from "./FadeInOnScroll";
+"use client"
 
-export default function HomePage({ scrollY }) {
+import React from "react";
+import { useRouter } from "next/navigation";
+import FadeInOnScroll from "./common/FadeInOnScroll";
+import ServiceItem from "./features/home/ServiceItem";
+import ClientMarquee from "./clients/ClientMarquee";
+import { Clock, Zap, Truck, Award } from "lucide-react";
+
+export default function HomePage({ breadcrumb }) {
+  const router = useRouter();
+
   const handleExploreProducts = () => {
-    // Trigger navigation to products page
-    const event = new CustomEvent('navigateToProducts');
-    window.dispatchEvent(event);
+    router.push('/products');
   };
 
   return (
-    <div>
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <FadeInOnScroll variant="up">
         <section className="bg-gradient-to-br from-[#0A0F17] via-[#1a1f2e] to-[#0A0F17] text-white relative overflow-hidden w-full px-0 min-h-screen">
           <div className="absolute inset-0 bg-gradient-to-r from-[#0A0F17]/90 to-transparent"></div>
-          <div
-            className="w-full py-32 relative z-10 flex justify-center min-h-screen items-center"
-            style={{ transform: scrollY ? `translateY(${scrollY * 0.1}px)` : undefined }}
-          >
+          <div className="w-full py-32 relative z-10 flex justify-center min-h-screen items-center">
             <div className="text-center max-w-5xl w-full px-4 sm:px-6 lg:px-8 mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold mb-10 animate-fade-in-up">PT Menara Adhi Sitara</h1>
               <p className="text-xl md:text-2xl text-gray-200 mb-12 animate-fade-in-up-delay">
@@ -38,15 +39,18 @@ export default function HomePage({ scrollY }) {
         </section>
       </FadeInOnScroll>
 
+      {/* Breadcrumb below hero section */}
+      {breadcrumb}
+
       {/* Our Clients Section */}
-      <FadeInOnScroll variant="right">
-        <section className="relative bg-gradient-to-br from-white via-gray-50 to-gray-100 overflow-hidden w-full px-0 min-h-screen md:min-h-screen flex items-center py-16 md:py-0">
+      <FadeInOnScroll variant="fade">
+        <section className="relative bg-gray-50 overflow-hidden w-full px-0 min-h-screen md:min-h-screen flex items-center py-16 md:py-0">
           <div className="w-full flex justify-center items-center">
-            <div className="max-w-7xl w-full px-4 sm:px-6 lg:px-8 mx-auto">
+            <div className="max-w-6xl w-full px-4 sm:px-6 lg:px-8 mx-auto">
               <div className="text-center mb-8 md:mb-16 animate-fade-in-up">
-                <h2 className="text-2xl md:text-4xl font-extrabold text-[#0A0F17] mb-4 tracking-tight">Our Trusted Clients</h2>
-                <p className="text-base md:text-lg text-gray-600 mb-6">Serving industry leaders across various sectors</p>
-                <div className="mx-auto w-12 h-0.5 bg-[#FFC402] rounded-full mb-4" />
+                <h2 className="text-2xl md:text-4xl font-extrabold text-[#0A0F17] mb-4 tracking-tight">Our Clients</h2>
+                <p className="text-base md:text-lg text-gray-600 mb-6">Serving industry across various sectors</p>
+                <div className="mx-auto w-12 h-0.5 bg-[#0A0F17] rounded-full mb-4" />
               </div>
               <div className="bg-white/80 rounded-3xl p-8 md:p-16 lg:p-20 backdrop-blur-md">
                 <ClientMarquee />
@@ -56,9 +60,9 @@ export default function HomePage({ scrollY }) {
         </section>
       </FadeInOnScroll>
 
-      {/* Service Highlights */}
+      {/* Service Highlights - Why Choose Us */}
       <FadeInOnScroll variant="fade">
-        <section className="relative bg-gray-50 overflow-hidden w-full px-0 min-h-screen md:min-h-screen flex items-center py-16 md:py-0">
+        <section className="relative bg-white overflow-hidden w-full px-0 min-h-screen md:min-h-screen flex items-center py-16 md:py-0">
           <div className="w-full flex justify-center items-center">
             <div className="max-w-6xl w-full px-4 sm:px-6 lg:px-8 mx-auto">
               <div className="text-center mb-8 md:mb-16 animate-fade-in-up">

@@ -35,41 +35,45 @@ export default function AutoBreadcrumb() {
 
   // Render the breadcrumb navigation
   return (
-    <nav aria-label="breadcrumb" className="w-full my-4">
-      <ol className="flex flex-wrap items-center gap-2 text-sm">
-        {/* Home crumb */}
-        <li>
-          <Link href="/" className="text-gray-500 hover:text-[#FFC402] font-medium px-3 py-1 rounded transition-colors bg-gray-50">
-            Home
-          </Link>
-        </li>
-        <li aria-hidden="true" className="text-gray-400">
-          <ChevronRight className="w-4 h-4" />
-        </li>
-        {crumbs.map((crumb, idx) => (
-          <React.Fragment key={crumb.href}>
+    <div className="w-full bg-white border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="breadcrumb" className="py-4">
+          <ol className="flex flex-wrap items-center gap-2 text-sm">
+            {/* Home crumb */}
             <li>
-              {crumb.isLast ? (
-                <span className="font-semibold text-[#0A0F17] bg-[#FFC402]/20 px-3 py-1 rounded" aria-current="page">
-                  {crumb.label}
-                </span>
-              ) : (
-                <Link
-                  href={crumb.href}
-                  className="text-gray-500 hover:text-[#FFC402] font-medium px-3 py-1 rounded transition-colors bg-gray-50"
-                >
-                  {crumb.label}
-                </Link>
-              )}
+              <Link href="/" className="text-gray-500 hover:text-[#FFC402] font-medium px-3 py-2 rounded-lg transition-colors bg-gray-50 hover:bg-gray-100">
+                Home
+              </Link>
             </li>
-            {idx !== crumbs.length - 1 && (
-              <li aria-hidden="true" className="text-gray-400">
-                <ChevronRight className="w-4 h-4" />
-              </li>
-            )}
-          </React.Fragment>
-        ))}
-      </ol>
-    </nav>
+            <li aria-hidden="true" className="text-gray-400">
+              <ChevronRight className="w-4 h-4" />
+            </li>
+            {crumbs.map((crumb, idx) => (
+              <React.Fragment key={crumb.href}>
+                <li>
+                  {crumb.isLast ? (
+                    <span className="font-semibold text-[#0A0F17] bg-[#FFC402]/20 px-3 py-2 rounded-lg" aria-current="page">
+                      {crumb.label}
+                    </span>
+                  ) : (
+                    <Link
+                      href={crumb.href}
+                      className="text-gray-500 hover:text-[#FFC402] font-medium px-3 py-2 rounded-lg transition-colors bg-gray-50 hover:bg-gray-100"
+                    >
+                      {crumb.label}
+                    </Link>
+                  )}
+                </li>
+                {idx !== crumbs.length - 1 && (
+                  <li aria-hidden="true" className="text-gray-400">
+                    <ChevronRight className="w-4 h-4" />
+                  </li>
+                )}
+              </React.Fragment>
+            ))}
+          </ol>
+        </nav>
+      </div>
+    </div>
   );
 } 

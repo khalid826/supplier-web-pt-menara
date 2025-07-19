@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 import { Mail, MessageCircle } from "lucide-react";
@@ -93,21 +95,20 @@ export default function ContactChatPopup({ onClose }: ContactChatPopupProps) {
         aria-label="Close contact popup"
       />
       {/* Popup */}
-      <div className={`fixed z-50 bottom-24 right-8 flex flex-col items-end w-auto`}
+      <div className={`fixed z-50 bottom-24 right-8 flex flex-col items-end w-auto contact-popup-container`}
         style={{ pointerEvents: closing ? 'none' : 'auto' }}
       >
         <div
           ref={popupRef}
-          className={`relative shadow-xl rounded-2xl px-0 py-0 transition-all duration-350 bg-white flex flex-col
+          className={`relative shadow-xl rounded-2xl px-0 py-0 transition-all duration-350 bg-white flex flex-col contact-popup
             ${stage === 2 ? "min-h-[320px] w-96" : "min-h-[120px] w-64"}
             ${closing || animatingStage ? 'opacity-0 scale-95 translate-y-4' : 'opacity-100 scale-100 translate-y-0'}
             animate-fade-in-up
           `}
-          style={{ borderBottomRightRadius: 32 }}
         >
           {/* Header Bar */}
-          <div className="flex items-center justify-between px-6 py-3 rounded-t-2xl" style={{ background: '#FFC402' }}>
-            <span className="font-bold text-lg" style={{ color: '#0A0F17' }}>
+          <div className="flex items-center justify-between px-6 py-3 rounded-t-2xl contact-popup-header">
+            <span className="font-bold text-lg contact-popup-title">
               {stage === 2 ? 'Email Us' : 'Contact Us'}
             </span>
             {onClose && (
@@ -203,9 +204,6 @@ export default function ContactChatPopup({ onClose }: ContactChatPopupProps) {
           </div>
           {/* Contact Info Section */}
           <div className="px-6 pb-4 pt-2 border-t border-gray-100 text-xs text-gray-500 flex flex-col gap-1">
-            {/* <div><span className="font-semibold text-[#0A0F17]">WhatsApp:</span>
-            <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" className="hover:underline text-[#0A0F17]">+{WHATSAPP_NUMBER} (Alit)</a>
-            </div> */}
             <div>
               <span className="font-semibold text-[#0A0F17]">WhatsApp: </span>
               <span className="text-[#0A0F17]">+{WHATSAPP_NUMBER} (Alit)</span>

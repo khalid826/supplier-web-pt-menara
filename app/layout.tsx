@@ -1,11 +1,16 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import AutoBreadcrumb from '../components/common/AutoBreadcrumb'
+import Footer from '../components/common/Footer'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'PT Menara Adhi Sitara',
+  description: 'Your Premier Partner for Electrical & Instrumentation Solutions',
+  generator: 'Next.js',
+  icons: {
+    icon: '/icon2.png',
+    shortcut: '/icon2.png',
+    apple: '/icon2.png',
+  },
 }
 
 export default function RootLayout({
@@ -16,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* Breadcrumb navigation for all pages */}
-        <AutoBreadcrumb />
         {children}
+        {/* Footer */}
+        <Footer />
       </body>
     </html>
   )

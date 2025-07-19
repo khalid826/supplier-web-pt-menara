@@ -1,10 +1,52 @@
-/*
- * products.json
- *
- * Static data for product information.
- * Used in: product-related components and pages.
- */
 [
-  { "name": "Product A", "image": "/images/products/product-a.png", "description": "Description for Product A." },
-  { "name": "Product B", "image": "/images/products/product-b.png", "description": "Description for Product B." }
+  {
+    "id": "diesel-engine-spare-parts",
+    "name": "Diesel Engine Spare Parts",
+    "description": "High-quality diesel engine spare parts and components for industrial applications",
+    "products": [
+      {
+        "id": "clarke",
+        "name": "Clarke",
+        "logo": "/brands/products/product-logo-clarke.png",
+        "description": "Premium Clarke diesel engine spare parts and components for reliable performance."
+      },
+      {
+        "id": "cummins",
+        "name": "Cummins",
+        "logo": "/brands/products/product-logo-cummins.png",
+        "description": "Professional Cummins diesel engine spare parts and components for industrial use."
+      }
+    ]
+  },
+  {
+    "id": "elektrikal-spare-parts",
+    "name": "Elektrikal Spare Parts",
+    "description": "Professional electrical spare parts and equipment for industrial applications",
+    "products": [
+      {
+        "id": "fluke",
+        "name": "Fluke",
+        "logo": "/brands/products/product-logo-fluke.png",
+        "description": "Professional Fluke electrical spare parts and measurement equipment for industrial use."
+      },
+      {
+        "id": "rittal",
+        "name": "Rittal",
+        "logo": "/brands/products/product-logo-rittal.png",
+        "description": "High-quality Rittal electrical spare parts and enclosure solutions for industrial applications."
+      },
+      {
+        "id": "schneider",
+        "name": "Schneider",
+        "logo": "/brands/products/product-logo-schneider.png",
+        "description": "Premium Schneider electrical spare parts and automation solutions for modern industries."
+      },
+      {
+        "id": "sika",
+        "name": "SIKA",
+        "logo": "/brands/products/product-logo-sika.jpg",
+        "description": "Professional SIKA electrical spare parts and sealing solutions for demanding environments."
+      }
+    ]
+  }
 ] 

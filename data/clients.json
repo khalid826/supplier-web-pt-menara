@@ -1,11 +1,5 @@
-/*
- * clients.json
- *
- * Static data for client logos and names.
- * Used in: components/clients/ClientMarquee.tsx and anywhere client info is needed.
- */
 [
-  { "name": "PT Prima Layanan Nasional Enjiniring", "logo": "/client/logo-plne.png" },
-  { "name": "PT APCA Tirta Engineering", "logo": "/client/logo-APCAE.png" },
-  { "name": "PT Raya Adi Teknika", "logo": "/client/logo-RAYA.png" }
+  { "id": "plne", "name": "PT Prima Layanan Nasional Enjiniring", "logo": "/brands/clients/logo-plne.png" },
+  { "id": "apcae", "name": "PT APCA Tirta Engineering", "logo": "/brands/clients/logo-APCAE.png" },
+  { "id": "raya", "name": "PT Raya Adi Teknika", "logo": "/brands/clients/logo-RAYA.png" }
 ] 

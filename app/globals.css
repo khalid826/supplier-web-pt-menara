@@ -7,28 +7,195 @@ body {
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  /* Custom animations */
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
   }
-  /* Fade-in animation (if needed, but Tailwind's transition/opacity/transform may suffice) */
-  .fade-in {
-    @apply opacity-100 translate-y-0;
-    animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
   }
+
+  .animate-fade-in-up-delay {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+  }
+
+  .animate-fade-in-up-delay-2 {
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  /* Custom transition utilities */
   .transition-all {
     transition-property: opacity, transform;
+  }
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(32px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes marquee {
+  0% { 
+    transform: translateX(0); 
+  }
+  100% { 
+    transform: translateX(-50%); 
+  }
+}
+
+
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffc402;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e6b002;
+}
+
+
+
+/* Marquee styles */
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  background: transparent;
+  padding: 40px 0;
+  position: relative;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.marquee-track {
+  display: inline-block;
+  animation: marquee 30s linear infinite;
+  min-width: 200%;
+  white-space: nowrap;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background: transparent;
+}
+
+.client-marquee-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 80px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #222;
+  transition: transform 0.2s cubic-bezier(.4,2,.6,1);
+  cursor: pointer;
+  gap: 16px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  text-align: center;
+}
+
+.client-marquee-item:hover {
+  transform: scale(1.08);
+}
+
+.client-logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.client-name {
+  font-weight: 600;
+  font-size: 18px;
+  color: #222;
+  line-height: 1.4;
+  white-space: normal;
+  max-width: 180px;
+}
+
+/* Responsive marquee */
+@media (max-width: 768px) {
+  .client-marquee-item {
+    margin: 0 40px;
+  }
+  .client-logo {
+    width: 150px;
+    height: 150px;
+  }
+  .client-name {
+    font-size: 16px;
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-marquee-item {
+    margin: 0 30px;
+  }
+  .client-logo {
+    width: 120px;
+    height: 120px;
+  }
+  .client-name {
+    font-size: 14px;
+    max-width: 120px;
+  }
+}
+
+/* Contact popup styles */
+.contact-popup {
+  border-bottom-right-radius: 32px;
+}
+
+.contact-popup-header {
+  background: #FFC402;
+}
+
+.contact-popup-title {
+  color: #0A0F17;
 }
 
 @layer base {

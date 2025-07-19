@@ -5,7 +5,15 @@
  * Used in: product-related components, data/products.json, and anywhere product typing is needed.
  */
 export interface Product {
+  id: string;
   name: string;
-  image: string;
+  logo: string;
   description: string;
+}
+
+export interface ProductCategory {
+  id: string;
+  name: string;
+  description: string;
+  products: Product[];
 } 
